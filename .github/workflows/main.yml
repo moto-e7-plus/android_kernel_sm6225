@@ -53,7 +53,7 @@ jobs:
 
           # Clean and build
           make mrproper
-          make O=out ARCH=arm64 guam_defconfig
+          make O=out ARCH=arm64 guamp_defconfig
           make O=out -j$(nproc --all)
 
       - name: Setup AnyKernel
