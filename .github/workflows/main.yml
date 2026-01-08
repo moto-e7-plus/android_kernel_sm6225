@@ -52,7 +52,7 @@ jobs:
           export CROSS_COMPILE=aarch64-linux-gnu-
 
           # Clean and build
-          make mrproper
+          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
           make O=out ARCH=arm64 guamp_defconfig
           make O=out -j$(nproc --all)
 
